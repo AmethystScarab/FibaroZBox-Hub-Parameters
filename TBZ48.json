@@ -1,0 +1,1098 @@
+{
+    "description": "GoControl GC-TBZ48 Thermostat",
+    "parameters": [
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Select the HVAC system configuration type.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Standard",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 0
+					},
+                    {
+                        "description": {
+                            "en": "Heat pump",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 1
+					}
+				]
+			},
+            "label": {
+                "en": "System Type",
+                "pl": ""
+			},
+            "parameterNumber": 1,
+            "size": 1
+		},
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Select the heating fan propulsion system type.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Gas",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 0
+					},
+                    {
+                        "description": {
+                            "en": "Electric",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 1
+					}
+				]
+			},
+            "label": {
+                "en": "Fan Type",
+                "pl": ""
+			},
+            "parameterNumber": 2,
+            "size": 1
+		},
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Configure the heat pump reversing changeover valve actuation orientation.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "w/Cool",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 0
+					},
+                    {
+                        "description": {
+                            "en": "w/Heat",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 1
+					}
+				]
+			},
+            "label": {
+                "en": "Change Over Type",
+                "pl": ""
+			},
+            "parameterNumber": 3,
+            "size": 1
+		},
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable or disable support for a secondary staging furnace cycle.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Disabled",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 0
+					},
+                    {
+                        "description": {
+                            "en": "Enabled",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 1
+					}
+				]
+			},
+            "label": {
+                "en": "2nd Stage Heat Enable",
+                "pl": ""
+			},
+            "parameterNumber": 4,
+            "size": 1
+		},
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable auxiliary multi-stage strip heater configurations.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Disabled",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 0
+					},
+                    {
+                        "description": {
+                            "en": "Enabled",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 1
+					}
+				]
+			},
+            "label": {
+                "en": "Aux Heat Enable",
+                "pl": ""
+			},
+            "parameterNumber": 5,
+            "size": 1
+		},
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Enable or disable support for second-stage localized cooling cycles.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Disabled",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 0
+					},
+                    {
+                        "description": {
+                            "en": "Enabled",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 1
+					}
+				]
+			},
+            "label": {
+                "en": "2nd Stage Cool Enable",
+                "pl": ""
+			},
+            "parameterNumber": 6,
+            "size": 1
+		},
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Configure the visible localized scale format criteria.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Celsius",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 0
+					},
+                    {
+                        "description": {
+                            "en": "Fahrenheit",
+                            "pl": ""
+						},
+                        "type": "value",
+                        "value": 1
+					}
+				]
+			},
+            "label": {
+                "en": "Temperature Unit",
+                "pl": ""
+			},
+            "parameterNumber": 7,
+            "size": 1
+		},
+        {
+            "defaultValue": 5,
+            "description": {
+                "en": "Set minutes delay window to protect against compressor short cycling.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "max": 9,
+                        "min": 5,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+					}
+				]
+			},
+            "label": {
+                "en": "Minimum Off Time",
+                "pl": ""
+			},
+            "parameterNumber": 8,
+            "size": 1
+		},
+        {
+            "defaultValue": 3,
+            "description": {
+                "en": "Forced internal operational compressor execution time window restriction limit.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "max": 9,
+                        "min": 3,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "min"
+					}
+				]
+			},
+            "label": {
+                "en": "Minimum Run Time",
+                "pl": ""
+			},
+            "parameterNumber": 9,
+            "size": 1
+		},
+        {
+            "defaultValue": 3,
+            "description": {
+                "en": "Minimum deadband gap separation range between dynamic auto-changeover targets.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "max": 15,
+                        "min": 3,
+                        "scale": 1,
+                        "step": 1,
+                        "type": "range",
+                        "unit": "F"
+					}
+				]
+			},
+            "label": {
+                "en": "Setpoint H/C Delta",
+                "pl": ""
+			},
+            "parameterNumber": 10,
+            "size": 1
+		},
+        {
+            "defaultValue": 1,
+            "description": {
+                "en": "Differential boundary parameters to initialize stage 1 ambient heating.",
+                "pl": ""
+			},
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "max": 6,
+                        "min": 1,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "H Delta Stage 1 ON",
+				"pl": ""
+			},
+			"parameterNumber": 11,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Offset criteria parameters defining stage 1 heating temperature line deactivation loops.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 5,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "H Delta Stage 1 OFF",
+				"pl": ""
+			},
+			"parameterNumber": 12,
+			"size": 1
+		},
+		{
+			"defaultValue": 2,
+			"description": {
+				"en": "Staging parameters defining secondary heating environment initialization boundaries.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 7,
+						"min": 2,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "H Delta Stage 2 ON",
+				"pl": ""
+			},
+			"parameterNumber": 13,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Offset criteria parameters defining stage 2 heating temperature line deactivation loops.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 6,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "H Delta Stage 2 OFF",
+				"pl": ""
+			},
+			"parameterNumber": 14,
+			"size": 1
+		},
+		{
+			"defaultValue": 3,
+			"description": {
+				"en": "Staging constraints to engage active auxiliary heat strip modules operations.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 8,
+						"min": 3,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "H Delta Aux ON",
+				"pl": ""
+			},
+			"parameterNumber": 15,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Offset criteria parameters defining stage 3 heating temperature line deactivation loops.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 7,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "H Delta Stage 3 OFF",
+				"pl": ""
+			},
+			"parameterNumber": 16,
+			"size": 1
+		},
+		{
+			"defaultValue": 1,
+			"description": {
+				"en": "Differential threshold targets required to trigger cooling cycle stage 1 routines.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 6,
+						"min": 1,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "C Delta Stage 1 ON",
+				"pl": ""
+			},
+			"parameterNumber": 17,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Offset criteria parameters defining stage 1 cooling cycle cutoff loops.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 5,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "C Delta Stage 1 OFF",
+				"pl": ""
+			},
+			"parameterNumber": 18,
+			"size": 1
+		},
+		{
+			"defaultValue": 2,
+			"description": {
+				"en": "Differential threshold targets required to trigger cooling cycle stage 2 routines.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 7,
+						"min": 2,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "C Delta Stage 2 ON",
+				"pl": ""
+			},
+			"parameterNumber": 19,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Offset criteria parameters defining stage 2 cooling cycle cutoff loops.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 6,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "F"
+					}
+				]
+			},
+			"label": {
+				"en": "C Delta Stage 2 OFF",
+				"pl": ""
+			},
+			"parameterNumber": 20,
+			"size": 1
+		},
+		{
+			"defaultValue": 8319,
+			"description": {
+				"en": "Bitmask metrics config identifying target updating status arrays directed to hub.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 65535,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range"
+					}
+				]
+			},
+			"label": {
+				"en": "Lifeline Association Group Report to Send",
+				"pl": ""
+			},
+			"parameterNumber": 23,
+			"size": 2
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Lock active operational buttons on local physics screen enclosure arrays.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"description": {
+							"en": "Unlocked",
+							"pl": ""
+						},
+						"type": "value",
+						"value": 0
+					},
+					{
+						"description": {
+							"en": "Locked",
+							"pl": ""
+						},
+						"type": "value",
+						"value": 1
+					}
+				]
+			},
+			"label": {
+				"en": "Display Lock",
+				"pl": ""
+			},
+			"parameterNumber": 24,
+			"size": 1
+		},
+		{
+			"defaultValue": 20,
+			"description": {
+				"en": "Timeout variable properties governing equipment backlight initialization constraints.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 30,
+						"min": 10,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "sec"
+					}
+				]
+			},
+			"label": {
+				"en": "Backlight Timer",
+				"pl": ""
+			},
+			"parameterNumber": 26,
+			"size": 1
+		},
+		{
+			"defaultValue": 90,
+			"description": {
+				"en": "Maximum bounds heating line configuration safety margin properties limits.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 109,
+						"min": 30,
+						"scale": 1,
+						"step": 1,
+						"type": "range"
+					}
+				]
+			},
+			"label": {
+				"en": "Max Heat Setpoint",
+				"pl": ""
+			},
+			"parameterNumber": 33,
+			"size": 1
+		},
+		{
+			"defaultValue": 61,
+			"description": {
+				"en": "Minimum bounds restriction target points governing structural line safety profiles.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 112,
+						"min": 33,
+						"scale": 1,
+						"step": 1,
+						"type": "range"
+					}
+				]
+			},
+			"label": {
+				"en": "Min Cool Setpoint",
+				"pl": ""
+			},
+			"parameterNumber": 34,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Toggle localized stand-alone scheduled operational target configurations sets.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"description": {
+							"en": "Disable",
+							"pl": ""
+						},
+						"type": "value",
+						"value": 0
+					},
+					{
+						"description": {
+							"en": "Enable",
+							"pl": ""
+						},
+						"type": "value",
+						"value": 1
+					}
+				]
+			},
+			"label": {
+				"en": "Schedule",
+				"pl": ""
+			},
+			"parameterNumber": 38,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Force manual target configuration hold loops bypassing auto metrics.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"description": {
+							"en": "Hold",
+							"pl": ""
+						},
+						"type": "value",
+						"value": 0
+					},
+					{
+						"description": {
+							"en": "Run",
+							"pl": ""
+						},
+						"type": "value",
+						"value": 1
+					}
+				]
+			},
+			"label": {
+				"en": "Run/Hold Mode",
+				"pl": ""
+			},
+			"parameterNumber": 39,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Configure economic conservation parameters options schemas context criteria.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"description": {
+							"en": "No setback",
+							"pl": ""
+						},
+						"type": "value",
+						"value": 0
+					},
+					{
+						"description": {
+							"en": "Unoccupied mode",
+							"pl": ""
+						},
+						"type": "value",
+						"value": 2
+					}
+				]
+			},
+			"label": {
+				"en": "Setback Mode",
+				"pl": ""
+			},
+			"parameterNumber": 40,
+			"size": 1
+		},
+		{
+			"defaultValue": 62,
+			"description": {
+				"en": "Target heating line profiles implemented during vacancy operational modes intervals.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 109,
+						"min": 30,
+						"scale": 1,
+						"step": 1,
+						"type": "range"
+					}
+				]
+			},
+			"label": {
+				"en": "Un-Occupied HSP",
+				"pl": ""
+			},
+			"parameterNumber": 41,
+			"size": 1
+		},
+		{
+			"defaultValue": 80,
+			"description": {
+				"en": "Target cooling line profiles implemented during vacancy operational modes intervals.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 112,
+						"min": 33,
+						"scale": 1,
+						"step": 1,
+						"type": "range"
+					}
+				]
+			},
+			"label": {
+				"en": "Un-Occupied CSP",
+				"pl": ""
+			},
+			"parameterNumber": 42,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Z-Wave node identifier indexing linked active remote tracking sensors units.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 252,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range"
+					}
+				]
+			},
+			"label": {
+				"en": "Remote Sensor 1 Node Number",
+				"pl": ""
+			},
+			"parameterNumber": 43,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Captured metrics data points transmitted via network attached remote ambient units.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 112,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range"
+					}
+				]
+			},
+			"label": {
+				"en": "Remote Sensor 1 Temperature",
+				"pl": ""
+			},
+			"parameterNumber": 46,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Calibration parameter corrections defining alignment offsets variations tuning arrays variables.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 7,
+						"min": -7,
+						"scale": 1,
+						"step": 1,
+						"type": "range"
+					}
+				]
+			},
+			"label": {
+				"en": "Internal Sensor Temp Offset",
+				"pl": ""
+			},
+			"parameterNumber": 48,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Calibration parameter corrections defining remote module tracking offsets alignment fine-tuning rules.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 7,
+						"min": -7,
+						"scale": 1,
+						"step": 1,
+						"type": "range"
+					}
+				]
+			},
+			"label": {
+				"en": "R1 Sensor Temp Offset",
+				"pl": ""
+			},
+			"parameterNumber": 49,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Onboard timer metric constraints logging operational hour indexes tracking asset life cycle maintenance boundaries.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 4000,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "hours"
+					}
+				]
+			},
+			"label": {
+				"en": "Filter Timer",
+				"pl": ""
+			},
+			"parameterNumber": 52,
+			"size": 2
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Cumulative tracking variable logs detailing furnace execution performance periods ranges targets.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 4000,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "hours"
+					}
+				]
+			},
+			"label": {
+				"en": "Heat Timer",
+				"pl": ""
+			},
+			"parameterNumber": 54,
+			"size": 2
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Cumulative tracking variable logs detailing compressor runtime metrics statistics updates fields.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 4000,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "hours"
+					}
+				]
+			},
+			"label": {
+				"en": "Cool Timer",
+				"pl": ""
+			},
+			"parameterNumber": 55,
+			"size": 2
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Post-heating operation ventilation delay constraints parameters.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 90,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "sec"
+					}
+				]
+			},
+			"label": {
+				"en": "Fan Purge Heat",
+				"pl": ""
+			},
+			"parameterNumber": 61,
+			"size": 1
+		},
+		{
+			"defaultValue": 0,
+			"description": {
+				"en": "Post-cooling cycle residual condensation clearing propulsion blower timing restrictions constraints loop settings.",
+				"pl": ""
+			},
+			"format": {
+				"type": "enumerated",
+				"values": [
+					{
+						"max": 90,
+						"min": 0,
+						"scale": 1,
+						"step": 1,
+						"type": "range",
+						"unit": "sec"
+					}
+				]
+			},
+			"label": {
+				"en": "Fan Purge Cool",
+				"pl": ""
+			},
+			"parameterNumber": 62,
+			"size": 1
+		}
+	]
+}
