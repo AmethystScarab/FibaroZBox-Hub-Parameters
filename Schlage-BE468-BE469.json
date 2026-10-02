@@ -1,0 +1,521 @@
+{
+    "description": "Schlage BE469 Touchscreen Deadbolt with Alarm",
+    "parameters": [
+        {
+            "defaultValue": -1,
+            "description": {
+                "en": "Enable or disable the lock's audible beeper that sounds when the keypad is used or the lock operates.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Beeper disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Beeper enabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": -1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Beeper",
+                "pl": ""
+            },
+            "parameterNumber": 3,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "When Vacation Mode is enabled the lock will not accept any access codes entered on the keypad. The lock can still be operated via Z-Wave. Useful when away for extended periods.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Vacation Mode disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Vacation Mode enabled (keypad codes blocked)",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": -1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Vacation Mode",
+                "pl": ""
+            },
+            "parameterNumber": 4,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "When Lock and Leave is enabled, pressing the Schlage button on the outside of the lock will immediately lock the deadbolt without requiring a code. Convenient for hands-free locking when leaving.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Lock and Leave disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Lock and Leave enabled (press Schlage button to lock)",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": -1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Lock and Leave",
+                "pl": ""
+            },
+            "parameterNumber": 5,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Sets the built-in alarm mode for the lock. Alert mode triggers on any physical contact with the lock. Tamper mode triggers if the lock housing is tampered. Forced Entry mode triggers if the door is forced open. Sensitivity for each mode is set separately in parameters 8, 9, and 10. BE469 only.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Alarm off",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Alert mode (triggers on physical contact)",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "Tamper mode (triggers on housing tamper)",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Forced Entry mode (triggers if door is forced)",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 3
+                    }
+                ]
+            },
+            "label": {
+                "en": "Alarm Mode (BE469 Only)",
+                "pl": ""
+            },
+            "parameterNumber": 7,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Sets the sensitivity of the alarm when in Alert mode (Parameter 7 = 1). Higher sensitivity means the alarm triggers with less physical force or contact. Set to 0 if Alert mode is not in use. BE469 only.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Not supported / disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Most sensitive",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "High sensitivity",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Medium sensitivity",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 3
+                    },
+                    {
+                        "description": {
+                            "en": "Low sensitivity",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "Least sensitive",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 5
+                    }
+                ]
+            },
+            "label": {
+                "en": "Alert Alarm Sensitivity (BE469 Only)",
+                "pl": ""
+            },
+            "parameterNumber": 8,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Sets the sensitivity of the alarm when in Tamper mode (Parameter 7 = 2). Higher sensitivity means the alarm triggers with less force applied to the lock housing. Set to 0 if Tamper mode is not in use. BE469 only.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Not supported / disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Most sensitive",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "High sensitivity",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Medium sensitivity",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 3
+                    },
+                    {
+                        "description": {
+                            "en": "Low sensitivity",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "Least sensitive",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 5
+                    }
+                ]
+            },
+            "label": {
+                "en": "Tamper Alarm Sensitivity (BE469 Only)",
+                "pl": ""
+            },
+            "parameterNumber": 9,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Sets the sensitivity of the alarm for kick/forced-entry detection (Parameter 7 = 3). Higher sensitivity means the alarm triggers with less force applied to the door. Set to 0 if Forced Entry mode is not in use. BE469 only.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Not supported / disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Most sensitive",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 1
+                    },
+                    {
+                        "description": {
+                            "en": "High sensitivity",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 2
+                    },
+                    {
+                        "description": {
+                            "en": "Medium sensitivity",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 3
+                    },
+                    {
+                        "description": {
+                            "en": "Low sensitivity",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "Least sensitive",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 5
+                    }
+                ]
+            },
+            "label": {
+                "en": "Kick / Forced Entry Alarm Sensitivity (BE469 Only)",
+                "pl": ""
+            },
+            "parameterNumber": 10,
+            "size": 1
+        },
+        {
+            "defaultValue": -1,
+            "description": {
+                "en": "Controls whether the alarm mode, sensitivity, and on/off can be adjusted directly on the lock via the keypad. When disabled, alarm settings can only be changed via Z-Wave. BE469 only.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Local control disabled (alarm settings via Z-Wave only)",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Local control enabled (alarm settings adjustable on keypad)",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": -1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Alarm Local Controls (BE469 Only)",
+                "pl": ""
+            },
+            "parameterNumber": 11,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "When Auto Lock is enabled, the lock will automatically re-lock after being unlocked. The auto-lock delay is set on the lock itself via the keypad programming sequence (not configurable via Z-Wave).",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "Auto Lock disabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 0
+                    },
+                    {
+                        "description": {
+                            "en": "Auto Lock enabled",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": -1
+                    }
+                ]
+            },
+            "label": {
+                "en": "Auto Lock",
+                "pl": ""
+            },
+            "parameterNumber": 15,
+            "size": 1
+        },
+        {
+            "defaultValue": 4,
+            "description": {
+                "en": "Sets the required length for all user access codes on the lock. Changing this value will erase all existing user codes. All new codes must match the configured length. Valid range is 4 to 8 digits.",
+                "pl": ""
+            },
+            "format": {
+                "type": "enumerated",
+                "values": [
+                    {
+                        "description": {
+                            "en": "4 digits (default)",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 4
+                    },
+                    {
+                        "description": {
+                            "en": "5 digits",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 5
+                    },
+                    {
+                        "description": {
+                            "en": "6 digits",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 6
+                    },
+                    {
+                        "description": {
+                            "en": "7 digits",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 7
+                    },
+                    {
+                        "description": {
+                            "en": "8 digits",
+                            "pl": ""
+                        },
+                        "type": "value",
+                        "value": 8
+                    }
+                ]
+            },
+            "label": {
+                "en": "User Code PIN Length",
+                "pl": ""
+            },
+            "parameterNumber": 16,
+            "size": 1
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Read-only. Tracks the number of electronic lock/unlock transitions that occurred under high motor preload conditions. A high preload transition indicates the deadbolt encountered increased resistance during operation, which can indicate door misalignment, worn hardware, or a strike plate issue. Useful for diagnosing mechanical wear over time.",
+                "pl": ""
+            },
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 2147483647,
+                "step": 1,
+                "scale": 1.0
+            },
+            "label": {
+                "en": "Electrical High Preload Transition Count (Read Only)",
+                "pl": ""
+            },
+            "parameterNumber": 17,
+            "size": 4
+        },
+        {
+            "defaultValue": 0,
+            "description": {
+                "en": "Read-only. Returns the version number of the lock's internal bootloader firmware. Useful for diagnostics and confirming the hardware revision of the lock's Z-Wave module. This value cannot be changed via Z-Wave.",
+                "pl": ""
+            },
+            "format": {
+                "type": "range",
+                "min": 0,
+                "max": 127,
+                "step": 1,
+                "scale": 1.0
+            },
+            "label": {
+                "en": "Bootloader Version (Read Only)",
+                "pl": ""
+            },
+            "parameterNumber": 18,
+            "size": 1
+        }
+    ]
+}
